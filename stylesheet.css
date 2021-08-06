@@ -2,15 +2,6 @@ body {
     background-color: blanchedalmond;
 }
 
-#container {
-    background-color: blanchedalmond;
-    width: 400px;
-    height: 600px;
-    color: black;
-    font-size: 10px;
-    border: cornsilk 10px solid;
-}
-
 .date{
    background-color: aliceblue;
    width: 150px;
