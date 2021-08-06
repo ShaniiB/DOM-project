@@ -2,21 +2,7 @@
 //alert("Sanity Test");
 
 //make container
-function createContainer() {
-
-// array for journal entry
-let journalEntry = [];
-
-
-class journalEntry {
-   create(currentdate, journalinput, confidencelevel){
-
-this.currentdate = currentdate;
-this.journalinput = journalinput;
-this.confidencelevel = confidencelevel;
-
-}
-}
+function createContainer(); {
 
 let mainContainer = document.getElementById("mainContainer");    
 let headerOne = document.createElement("h1");
@@ -46,24 +32,40 @@ li.appendChild(listText);
 ordered.appendChild(li);
 mainContainer.appendChild(ordered);
 
-
-// prompt for 
-let reflection = prompt("Whomp-whomp");
-while (reflection === "" || reflection === null) { // user must answer to move on.
-reflection = prompt("Speak to me.");
 }
 
-// prompt for
-let todayDate = prompt("Whomp");
-while (todayDate === "" || todayDate === null) { // user must answer to move on.
-todayDate = prompt("Speak to me.");
+// prompt for date
+let currentDate = prompt("What is today?");
+while (currentDate === "" || currentDate === null) { // user must answer to move on.
+currentDate = prompt("What todays date?");
 }
 
-// prompt fot
-let confidenceTest = prompt("Whomp");
-while (confidenceTest === "" || confidenceTest === null) { // user must answer to move on.
-confidenceTest = prompt("Speak to me.");
+// prompt for confidence
+let confidenceLevel = prompt("How're you feeling today?\n\nLow / Medium / High?");
+while (confidenceLevel === "" || confidenceLevel === null) { // user must answer to move on.
+confidenceLevel = prompt("Speak to me?");
 }
 
+// prompt for journal
+let journalInput = prompt("What's on your mind?");
+while (journalInput === "" || journalInput === null ) { // user must answer to move on.
+journalInput = prompt("Reflection");
 }
+
+
+// array for journal entry
+//let journalEntry = []
+
+
+//class {"journalEntry"} {
+   create(currentdate, journalinput, confidencelevel); {
+
+//this.currentdate = currentdate;
+//this.journalinput = journalinput;
+//this.confidencelevel = confidencelevel;
+//
+//}
+//}
+}
+
 createContainer();
