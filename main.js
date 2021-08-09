@@ -1,73 +1,63 @@
 "use strict"
-//alert("Sanity Test");
 
-//make container
-function createContainer() {
+const arrayJournal = [];
 
-let mainContainer = document.getElementById("mainContainer");    
-let headerOne = document.createElement("h1");
-let text = document.createTextNode("Hello");
-headerOne.appendChild(text);
-console.log(mainContainer);
-mainContainer.appendChild(headerOne);
-console.log("sanity test"); 
+//___________ALERT("Sanity Test?");
+function createHolder() { //____MAKING A MORE ACCEPTABLE BODY
 
-// unordered lists
+    let betterBody = document.createElement("body");
+    betterBody.append;
+    document.body.style.backgroundColor = "coral";
 
-let unordered = document.createElement("ul");
-unordered.classList.add("unordered");
-let listItems = document.createElement("li");
-unordered.appendChild(listItems);
-let ulText = document.createTextNode("Hello");
-listItems.appendChild(ulText);
-mainContainer.appendChild(unordered);
+    let holder = document.getElementById("holder");
+    holder.append;
+    document.getElementById("holder").style.backgroundColor = "ivory";
+    document.getElementById("holder").style.position = "absolute";
+    document.getElementById("holder").style.top = "50px";
+    document.getElementById("holder").style.left = "450px";
+    document.getElementById("holder").style.zIndex = "0";
+    document.getElementById("holder").style.height = "700px";
+    document.getElementById("holder").style.width = "345px";
+    document.getElementById("holder").style.borderRadius = "15px";
 
+};
+class Journal {
+    constructor(currentDate, confidenceLevel, journalInput) {
 
-// ordered lists
-let ordered = document.createElement("ol");
-let li = document.createElement("li")
-ordered.classList.add("ordered");
-let listText = document.createTextNode("Hello");
-li.appendChild(listText);
-ordered.appendChild(li);
-mainContainer.appendChild(ordered);
+        this.currentDate = currentDate;
+        this.confidenceLevel = confidenceLevel;
+        this.journalInput = journalInput;
 
+        arrayJournal.push(this); 
+    }
+};
+//_____STARTING JOURNAL ENTRY & FUNCTIONALITY
+function createJournals() {
 
+    let containJournal = document.getElementById("containJournal");
+    containJournal.append;
 
-// prompt for date
-let currentDate = prompt("What is today?\n\nMM/DD/YYYY")
-while (currentDate === "" || currentDate === null) { // user must answer to move on.
-currentDate = prompt("What todays date?");
-}
-console.log(currentDate)
+    let currentDate = prompt ("Help");
+    let confidenceLevel = prompt ("Why");
+    let journalInput = prompt ("Is");
 
-// prompt for confidence
-let confidenceLevel = prompt("How're you feeling today?\n\nLow / Medium / High?")
-while (confidenceLevel === "" || confidenceLevel === null) { // user must answer to move on.
-confidenceLevel = prompt("Speak to me?");
-}
-console.log(confidenceLevel)
+    if (currentDate != null && confidenceLevel != null && journalInput != null) {
+        alert("Good job, champ");
 
-// prompt for journal
-let journalInput = prompt("What's on your mind?")
-while (journalInput === "" || journalInput === null ) { // user must answer to move on.
-journalInput = prompt("Reflection");
-}
-console.log(journalInput);
+};
 
-// array for journal entry
-//let journalEntry = []
+    let newEntry = new Journal;
+    
+};
 
+//_____STARTING BUTTON CREATION & FUNCTIONALITY
 
-//class {"journalEntry"} {
-//create(currentdate, journalinput, confidencelevel); {
+let btnHold = document.getElementById("buttonHolder");
+btnHold.append;
+let btn = document.createElement("button");
+btnHold.appendChild(btn);
+let btntext = document.createTextNode("New Entry");
+btn.addEventListener("click", createJournals);
+btn.appendChild(btntext);
+createHolder(); 
 
-//this.currentdate = currentdate;
-//this.journalinput = journalinput;
-//this.confidencelevel = confidencelevel;
-//
-//}
-//}
-}
-
-createContainer();
