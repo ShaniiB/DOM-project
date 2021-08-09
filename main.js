@@ -53,7 +53,7 @@ function createJournals() {
 
     let unordered = document.createElement("ul");   
     let listItem = document.createElement("li");
-    let liText = document.createTextNode(currentDate);
+    let liText = document.createTextNode(`Today's date is ${currentDate}`);
     listItem.appendChild(liText);
     unordered.appendChild(listItem);
     holder.appendChild(unordered);
